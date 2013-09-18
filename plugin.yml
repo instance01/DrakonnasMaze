@@ -1,0 +1,34 @@
+name: DrakonnasMaze
+main: com.comze_instancelabs.maze.Main
+version: 1.0
+author: instancelabs
+softdepend: [Vault]
+permissions:
+  maze.*:
+    description: Gives access to all maze commands.
+    children:
+      maze.sign: true
+      maze.create: true
+      maze.setspawn: true
+      maze.setlobby: true
+      maze.list: true
+      maze.reload: true
+      maze.remove: true
+  maze.sign:
+    description: Gives access to create signs for joining games.
+  maze.create:
+    description: Gives access to the creation of courses.
+  maze.setspawn:
+    description: Gives access to set the spawns.
+  maze.setlobby:
+    description: Gives access to set the lobby.
+  maze.remove:
+    description: Gives access to remove the course. 
+  maze.list:
+    description: Gives access to listing all courses. 
+  maze.reload:
+    description: Gives access to reloading the configuration. 
+commands:
+   maze:
+      description: Main command
+      usage: /maze [name]
